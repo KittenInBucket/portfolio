@@ -684,3 +684,15 @@ select:focus-visible {
     transform: none;
   }
 }
+
+/* ---------- Мобильные правки по макету ---------- */
+@media (max-width: 640px) {
+  .project--web, .project--graphic { border-top: 0; padding-top: 34px; }
+  .project-list { gap: 42px; }
+  .about-item { border-top: 0; padding-top: 34px; }
+  .about-grid { row-gap: 34px; }
+  .hero-name { font-size: min(114px, 17.5cqi); }
+  .project-link { min-height: 60px; background: var(--accent); color: var(--ink); box-shadow: none; }
+  .project-link .project-arrow { filter: brightness(0) saturate(100%); }
+  #about .section-intro { display: none; }
+}

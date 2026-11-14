@@ -696,3 +696,33 @@ select:focus-visible {
   .project-link .project-arrow { filter: brightness(0) saturate(100%); }
   #about .section-intro { display: none; }
 }
+
+/* Нажатие: затемнение без верхней тени */
+.project-link:active,
+.strip-button:active {
+  background: var(--pressed);
+  color: var(--canvas);
+  box-shadow: none;
+  transition-duration: 0s;
+}
+
+/* Убираем дополнительную внешнюю рамку */
+.viewer__close:focus-visible,
+.link-dialog .strip-button:focus-visible {
+  outline-offset: -2px;
+}
+
+/* На мобильных крестик располагается над изображением */
+@media (max-width: 640px) {
+  .viewer {
+    padding-top: 68px;
+  }
+
+  .viewer__close {
+    right: 20px;
+  }
+
+  .viewer__img {
+    max-height: calc(100dvh - 228px);
+  }
+}
